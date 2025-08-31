@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class ArticleController {
-  private final ArticleRepository articleRepository;
+  private final ArticleRepository articleRepository = new ArticleRepository();
 
   @GetMapping("/api/articles")
   public List<Article> index(){
